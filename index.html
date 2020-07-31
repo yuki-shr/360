@@ -9,20 +9,30 @@
     
   </script>
     
-    <model-viewer            
-    ar
-    alt="モデル"
-    src="makit.glb"
-                  skybox-image="Panorama1.png"
-                  style="width:1600px;height:1200px;" 
-                  background-color="#70BCD1"
-                  shadow-intensity="0"
-                  camera-controls
-                  interaction-prompt="auto"
-                  ar magic-leap>
-                  
-    
-    </model-viewer>
+<model-viewer src="../assets/ShopifyModels/Chair.glb" poster="../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-scale="fixed" camera-controls alt="A 3D model carousel">
+  
+  <button slot="ar-button" id="ar-button">
+    View in your space
+  </button>
+
+  <div id="ar-prompt">
+    <img src="../assets/hand.png">
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../assets/ShopifyModels/Chair.png');">
+
+      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../assets/ShopifyModels/Mixer.png');">
+
+      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../assets/ShopifyModels/GeoPlanter.png');">
+      
+      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../assets/ShopifyModels/ToyTrain.png');">
+      
+      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../assets/ShopifyModels/Canoe.png');">    
+    </button></div>
+  </div>
+</model-viewer>
     
 
 

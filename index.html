@@ -33,7 +33,7 @@
     </button>
           <button class="slide" onclick="switchSrc(this, '1')" style="background-image: url('model/1.JPG');">
       </button>
-      <button class="slide" onclick="switchSrc(this, 'ryu10_')" style="background-image: url('model/1.JPG');"> 
+      <button class="slide" onclick="switchSrc(this, 'ryu10')" style="background-image: url('model/1.JPG');"> 
     
     </div>
   </div>
@@ -44,7 +44,7 @@
 
   window.switchSrc = (element, name) => {
     const base = "model/" + name;
-    modelViewer.src = base + '.gltf';
+    modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.jpg';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
